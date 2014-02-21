@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE cross-domain-policy SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">
+<cross-domain-policy>
+	<allow-access-from domain="local.bennadel.com" secure="false" />
+</cross-domain-policy>
+
+<!-- 
+	In order for the Flash runtime to be able to upload files across domains, we
+	need to uplaod this document to the root of the Amazon S3 bucket to which we 
+	will be uploading files. 
+
+	NOTE: Once uploaded, make sure that "Everyone" has Open/Download AND View 
+	permissions on the file; otherwise, you'll get a security error. Also, if you 
+	upload this file more than once, I have found that I need to RE-SAVE the 
+	permissions on the object (even if they already say Open/Download/View).
+-->

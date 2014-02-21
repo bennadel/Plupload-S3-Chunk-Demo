@@ -1,0 +1,3 @@
+
+# Ignore the Amazon Web Services (AWS) credentials file.
+demo/aws-credentials.cfm
