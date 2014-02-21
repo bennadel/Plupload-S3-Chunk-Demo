@@ -282,6 +282,12 @@
 					// value (which is just the byte-size of the chunk).
 					uploader.settings.chunk_size = plupload.parseSize( "5mb" );
 
+					// Since we're chunking the file, Plupload will take care of the 
+					// chunking. As such, delete any artifacts from our non-chunked 
+					// uploads (see ELSE statement).
+					delete( uploader.settings.multipart_params.chunks );
+					delete( uploader.settings.multipart_params.chunk );
+
 					// Update the Key and Filename so that Amazon S3 will store the 
 					// CHUNK resource at the correct location.
 					uploader.settings.multipart_params.key = file.chunkKey;
